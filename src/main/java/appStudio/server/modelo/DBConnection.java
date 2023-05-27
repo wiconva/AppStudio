@@ -1,4 +1,4 @@
-package app.server.modelo;
+package appStudio.server.modelo;
 
 import  java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,7 +18,7 @@ public class DBConnection {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             connection = DriverManager.getConnection(URL);
         } catch (SQLException e) {
-            e.printStackTrace();} catch (ClassNotFoundException e) {
+            e.printStackTrace();} catch (Exception e) {
             throw new RuntimeException(e);
         }
         return connection;

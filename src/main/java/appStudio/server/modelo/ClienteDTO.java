@@ -1,4 +1,4 @@
-package app.server.modelo;
+package appStudio.server.modelo;
 
 public class ClienteDTO {
     private int id;

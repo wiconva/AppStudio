@@ -38,7 +38,7 @@
                     <archive>
                         <manifest>
                             //Aqui se establece el nombre de la clase principal
-                            <mainClass>app.WS.WSController</mainClass>
+                            <mainClass>appStudio.WS.MainController</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

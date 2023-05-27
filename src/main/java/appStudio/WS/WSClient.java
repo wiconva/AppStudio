@@ -1,8 +1,8 @@
-package app.WS;
+package appStudio.WS;
 
 
-import app.server.modelo.ClientDao;
-import app.server.modelo.ClienteDTO;
+import appStudio.server.modelo.ClientDao;
+import appStudio.server.modelo.ClienteDTO;
 import com.sun.net.httpserver.HttpExchange;
 import java.io.IOException;
 import java.io.OutputStream;

@@ -1,4 +1,4 @@
-package app.server.modelo;
+package appStudio.server.modelo;
 
 import java.sql.*;
 import java.util.ArrayList;
