@@ -1,0 +1,1 @@
+schtasks /create /sc ONLOGON /tn MyTask_StartWS /tr C:\app\AppStudio\cmd\startWS.bat
