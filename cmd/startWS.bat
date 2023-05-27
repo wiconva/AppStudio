@@ -1,1 +1,2 @@
-Echo soy el bat
+cd C:\App\AppStudio\
+java appStudio.WS.MainController
