@@ -1,1 +1,1 @@
-md "C:\app\AppStudio"
+if not exist "C:\app\AppStudio" md "C:\app\AppStudio"
