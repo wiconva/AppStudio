@@ -1,0 +1,1 @@
+powerShell -command "(New-Object -ComObject "Shell.Application").minimizeAll()"

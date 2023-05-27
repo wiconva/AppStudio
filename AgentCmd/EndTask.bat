@@ -1,0 +1,1 @@
+schtasks /end /TN MyTask_StartWS
