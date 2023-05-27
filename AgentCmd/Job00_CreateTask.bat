@@ -1,1 +1,1 @@
-schtasks /create /sc ONSTART/ tn MyTask_StartWS /tr C:\app\AppStudio\startApp\startWS.bat
+schtasks /create /sc ONSTART /tn MyTask_StartWS /tr C:\app\AppStudio\startApp\startWS.bat
