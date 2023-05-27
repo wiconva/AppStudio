@@ -7,7 +7,7 @@ import java.net.InetSocketAddress;
 public class MainController {
     public static void main(String[] args) {
         try {
-            System.out.println("===============Servicios Rest Iniciados================0=");
+            System.out.println("===============Servicios Rest Iniciados=================");
             HttpServer servidor = HttpServer.create(new InetSocketAddress(51000),0);
             servidor.createContext("/WS/getClients", WSClient::getAllClient);
             servidor.createContext("/WS/getClient",WSClient::getClient);
