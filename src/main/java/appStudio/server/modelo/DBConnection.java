@@ -6,7 +6,8 @@ import java.sql.SQLException;
 
 
 public class DBConnection {
-    private final String URL= "jdbc:sqlserver://localhost:1433;database=MVCDB;user=admin;password=admin;encrypt=false";
+    //private final String URL= "jdbc:sqlserver://localhost:1433;database=MVCDB;user=admin;password=admin;encrypt=false";
+    private final String URL= "jdbc:sqlserver://localhost:1433;database=MVCDB;user=sa;password=admin12345;encrypt=false";
     private final String USER="admin";
     private final String PASSWORD="admin";
     private Connection connection;
