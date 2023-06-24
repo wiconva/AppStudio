@@ -49,9 +49,27 @@ public class ClientDao {
         }
         return clienteDTOList;
     }
+    //Update one client gived the client.
+    public static int update(ClienteDTO c){
+      String sql = "UPDATE CLIENT SET NAME=?, SURNAME=?, AGE=? WHERE ID_CLIENT = ?";
+      Connection connection = new DBConnection().connect();
+      try{
+          PreparedStatement ps = connection.prepareStatement(sql);
+          ps.setString(1,c.getName());
+          ps.setString(2,c.getSurname());
+          ps.setInt(3, c.getAge());
+          ps.setInt(4, c.getId());
+          ps.executeUpdate();
+          connection.close();
+          return 0;
+      }catch (Exception e){
+          e.printStackTrace();
+          return 1;
+      }
+    }
 
     //Delete.
-    public static void delete (ClienteDTO clienteDTO){
+    public static int delete (ClienteDTO clienteDTO){
         String sql = "DELETE FROM CLIENT WHERE ID_CLIENT = ?";
         Connection connection = new DBConnection().connect();
 
@@ -60,13 +78,15 @@ public class ClientDao {
             ps.setInt(1, clienteDTO.getId());
             ps.executeUpdate();
             connection.close();
+            return 0;
         } catch (SQLException e) {
             e.printStackTrace();
+            return 1;
         }
 
     }
 
- /*Métodos específicos*/
+ /*Specific Methods*/
     public static List <ClienteDTO> getClientById (int id){
         List <ClienteDTO> clients = new ArrayList<>();
         ClienteDTO client = new ClienteDTO();
@@ -88,7 +108,6 @@ public class ClientDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return clients;
     }
 }

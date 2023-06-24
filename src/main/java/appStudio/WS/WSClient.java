@@ -17,9 +17,9 @@ public class WSClient {
 
         for (ClienteDTO c : clients){
             msgHTTP =msgHTTP+"ID="+c.getId()+
-                    ";Nombre="+c.getName()+
-                    ";Apellido="+c.getSurname()+
-                    ";Edad="+c.getAge()+"\n";
+                    ",Nombre="+c.getName()+
+                    ",Apellido="+c.getSurname()+
+                    ",Edad="+c.getAge()+";\n";
         }
 
         sendHTTPResponse(msgHTTP,exchange);
@@ -33,9 +33,9 @@ public class WSClient {
         String msgHTTP = "";
         for (ClienteDTO c : clients){
             msgHTTP =msgHTTP+"ID="+c.getId()+
-                    ";Nombre="+c.getName()+
-                    ";Apellido="+c.getSurname()+
-                    ";Edad="+c.getAge()+"\n";
+                    ",Nombre="+c.getName()+
+                    ",Apellido="+c.getSurname()+
+                    "Edad="+c.getAge()+";\n";
         }
 
         sendHTTPResponse(msgHTTP,httpExchange);
@@ -56,9 +56,9 @@ public class WSClient {
         newClient.setSurname(params[2][1]);
         newClient.setAge(Integer.parseInt(params[3][1]));
         if(ClientDao.create(newClient) == 0){
-            sendHTTPResponse("El cliente se creó exitosamente",ex);
+            sendHTTPResponse("Cliente ingresado con Exito :)",ex);
         }else {
-            sendHTTPResponse("No se pudo crear el Cliente !!!",ex);
+            sendHTTPResponse("No se pudo crear el Cliente :(",ex);
         }
 
     }

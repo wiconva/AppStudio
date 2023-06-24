@@ -8,7 +8,7 @@ public class MainController {
     public static void main(String[] args) {
         try {
             System.out.println("===============Servicios Rest Iniciados=================");
-            HttpServer servidor = HttpServer.create(new InetSocketAddress(51000),0);
+            HttpServer servidor = HttpServer.create(new InetSocketAddress(5000),0);
             servidor.createContext("/WS/getClients", WSClient::getAllClient);
             servidor.createContext("/WS/getClient",WSClient::getClient);
             servidor.createContext("/WS/createClient", WSClient::createClient);

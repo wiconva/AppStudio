@@ -1,27 +1,28 @@
 package appStudio.server.modelo;
 
+import appStudio.server.utilities.ConfigFileReader;
+
 import  java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 
 public class DBConnection {
-    //private final String URL= "jdbc:sqlserver://localhost:1433;database=MVCDB;user=admin;password=admin;encrypt=false";
+    private String connectionString = null;
 
-    private final String URL= "jdbc:sqlserver://localhost:1433;database=MVCDB;user=sa;password=admin12345$;encrypt=false";
-    private final String USER="admin";
-    private final String PASSWORD="admin";
+   // private final String URL= "jdbc:sqlserver://localhost:1433;database=MVCDB;user=sa;password=admin12345$;encrypt=false";
     private Connection connection;
 
 
     public Connection connect (){
         connection =null;
+        ConfigFileReader connectionConfigFileReader = new ConfigFileReader();
+        connectionString = connectionConfigFileReader.getKeyValue("Server.ConnectionConfig.txt","ConnectionString");
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            connection = DriverManager.getConnection(URL);
+            connection = DriverManager.getConnection(connectionString);
         } catch (SQLException e) {
             e.printStackTrace();} catch (Exception e) {
-            throw new RuntimeException(e);
         }
         return connection;
     }
