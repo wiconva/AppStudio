@@ -1,0 +1,2 @@
+ConnectionString===jdbc:sqlserver://localhost:1433;database=MVCDB;user=admin;password=admin;encrypt=false
+ServerPort===5100
