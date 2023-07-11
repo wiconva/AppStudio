@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Eliminar Cliente</title>
-</head>
-<body>
-<div>
-    <h1>Eliminar Cliente</h1>
-</div>
-<form action="http://localhost:5100/deleteClient" method="GET">
-  <h4>Ingese el id para eliminar un cliente.</h4>
-  <input type="text" name="ID">ID</input><br>
-  <button type="submit">Actualizar</button>
-</form>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eliminar Cliente</title>
+    </head>
+    <body>
+        <header id="header">
+            <link rel="stylesheet" href="../css/miCss.css"/>
+            <script src="../javaScript/header.js"></script>
+        </header>
+
+        <section>
+            <div>
+                <h1>Eliminar Cliente</h1>
+            </div>
+
+            <form action="http://localhost:5100/deleteClient" method="GET">
+                <h4>Ingese el id para eliminar un cliente.</h4>
+                <input type="text" name="ID">ID</input><br>
+                <button type="submit">Actualizar</button>
+            </form>
+        </section>
+
+    </body>
 </html>
