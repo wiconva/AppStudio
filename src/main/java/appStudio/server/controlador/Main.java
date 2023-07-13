@@ -94,8 +94,11 @@ public class Main {
     }
 
     private static void sendResponse ( int responseCode, String msgResponse,OutputStream os) throws IOException {
-        String outMsg = "HTTP/1.1 "+responseCode+" OK\nContent-Type: text/html\n" +
-                        "Content-Length: "+msgResponse.length()+"\n\n"+msgResponse;
+        String outMsg = "HTTP/1.1 "+responseCode+" OK"+"\n"+
+                        "Content-Type: text/html"+"\n"+
+                        "Access-Control-Allow-Origin: *"+"\n"+
+                        "Content-Length: "+msgResponse.length()+"\n\n"+
+                        msgResponse;
 
         os.write(outMsg.getBytes(StandardCharsets.UTF_8));
         os.close();
@@ -105,7 +108,7 @@ public class Main {
         String msgResponse="";
         List<ClienteDTO> cList = ClientDao.read();
         for(ClienteDTO c: cList){
-            msgResponse = msgResponse + c.getId()+","+c.getName()+","+c.getSurname()+","+c.getAge()+";\n";
+            msgResponse = msgResponse + c.getId()+","+c.getName()+","+c.getSurname()+","+c.getAge()+";";
         }
         return msgResponse;
     }

@@ -6,6 +6,11 @@
     </head>
     <body>
         <header id="header">
+            <style>
+            section div {
+                margin: 15px 40%;
+            }
+            </style>
             <link rel="stylesheet" href="../css/miCss.css"/>
             <script src="../javaScript/header.js"></script>
         </header>
@@ -13,16 +18,15 @@
         <section>
             <div>
                 <h1>Actualizar Cliente</h1>
+                <form action="http://localhost:5100/updateClient" method="GET">
+                    <h4>Ingese todos los datos para actualizar un cliente.</h4>
+                    <input type="text" name="ID">&nbsp ID</input><br>
+                    <input type="text" name="Nombre">&nbsp NOMBRE</input><br>
+                    <input type="text" name="Apellido">&nbsp APELLIDO</input><br>
+                    <input type="text" name="Edad">&nbsp EDAD</input><br>
+                    <button type="submit">Actualizar</button>
+                </form>
             </div>
-
-            <form action="http://localhost:5100/updateClient" method="GET">
-                <h4>Ingese todos los datos para actualizar un cliente.</h4>
-                <input type="text" name="ID">ID</input><br>
-                <input type="text" name="Nombre">NOMBRE</input><br>
-                <input type="text" name="Apellido">APELLIDO</input><br>
-                <input type="text" name="Edad">EDAD</input><br>
-                <button type="submit">Actualizar</button>
-            </form>
         </section>
 
     </body>

@@ -6,6 +6,11 @@
     </head>
     <body>
         <header id="header">
+            <style>
+            section div {
+                margin: 15px 40%;
+            }
+            </style>}
             <link rel="stylesheet" href="../css/miCss.css"/>
             <script src="../javaScript/header.js"></script>
         </header>
@@ -13,13 +18,12 @@
         <section>
             <div>
                 <h1>Eliminar Cliente</h1>
+                <form action="http://localhost:5100/deleteClient" method="GET">
+                    <h4>Ingese el id para eliminar un cliente.</h4>
+                    <input type="text" name="ID">&nbsp ID</input><br>
+                    <button type="submit">Actualizar</button>
+                </form>
             </div>
-
-            <form action="http://localhost:5100/deleteClient" method="GET">
-                <h4>Ingese el id para eliminar un cliente.</h4>
-                <input type="text" name="ID">ID</input><br>
-                <button type="submit">Actualizar</button>
-            </form>
         </section>
 
     </body>

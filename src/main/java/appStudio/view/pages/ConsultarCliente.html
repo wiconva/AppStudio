@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Eliminar Cliente</title>
+    </head>
+    <body>
+        <header id="header">
+            <style>
+            section div {
+                margin: 15px 40%;
+            }
+            </style>
+            <link rel="stylesheet" href="../css/miCss.css"/>
+            <script src="../javaScript/header.js"></script>
+            <script src="../javaScript/logicaJavaScript.js"></script>
+        </header>
+
+        <section>
+            <div>
+                <h1>Consultar Cliente</h1>
+                    <h4>Ingese el id para consultar un cliente.</h4>
+                    <input type="text" name="ID" id="idClient">&nbsp ID</input><br>
+                    <button onclick="getClient()">Consultar</button>
+                <table id="allClientsTable">
+                    <tr>
+                        <th>ID</th>
+                        <th>NOMBRE</th>
+                        <th>APELLIDO</th>
+                        <th>EDAD</th>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+    </body>
+</html>
