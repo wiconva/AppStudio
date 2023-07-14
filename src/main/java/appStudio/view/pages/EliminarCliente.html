@@ -10,19 +10,20 @@
             section div {
                 margin: 15px 40%;
             }
-            </style>}
+            </style>
             <link rel="stylesheet" href="../css/miCss.css"/>
             <script src="../javaScript/header.js"></script>
+            <script src="../javaScript/logicaJavaScript.js"></script>
         </header>
 
         <section>
             <div>
                 <h1>Eliminar Cliente</h1>
-                <form action="http://localhost:5100/deleteClient" method="GET">
-                    <h4>Ingese el id para eliminar un cliente.</h4>
-                    <input type="text" name="ID">&nbsp ID</input><br>
-                    <button type="submit">Actualizar</button>
-                </form>
+                <h4>Ingese el id para eliminar un cliente.</h4>
+                <input type="text" id="ID">&nbsp ID</input><br>
+                <button onclick="deleteClient()">Eliminar</button>
+                <div id="response"></div>
+
             </div>
         </section>
 
