@@ -89,5 +89,9 @@ function updateClient(){
 }
 
 function logear(){
-    console.log("entro logear!!!");
+    const user = document.getElementById("user");
+    const password  = document.getElementById("password");
+    if(user.value === "admin" && password.value == "admin"){
+        console.long("Credenciales correctas!!!");
+    }
 }

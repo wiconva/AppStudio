@@ -27,6 +27,8 @@ public class Main {
             String serverPort = cfr.getKeyValue(configFileName, serverPortKey);
             ServerSocket serverSocket = new ServerSocket(Integer.parseInt(serverPort));
 
+            System.out.println("Servidor levantado en el puerto: "+serverPort);
+
             while (true) {
                 Socket clientSocket = serverSocket.accept();
                 Thread.sleep(100);
