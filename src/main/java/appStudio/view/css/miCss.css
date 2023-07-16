@@ -18,3 +18,10 @@ body {
 td, th {
     border: 1px solid black;
 }
+#login{
+    border: solid 2px black;
+    border-radius: 20px;
+    padding: 10px 20px 30px 45px;
+    margin: 5%  40%;
+    background-color: forestgreen;
+}

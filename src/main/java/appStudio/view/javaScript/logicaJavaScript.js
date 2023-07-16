@@ -87,3 +87,7 @@ function updateClient(){
        responseDisplay.append(data);
     });
 }
+
+function logear(){
+    console.log("entro logear!!!");
+}
