@@ -1,1 +1,1 @@
-schtasks /end /TN MyTask_StartWS
+schtasks /end /TN MyTask_ServerAppStudio
