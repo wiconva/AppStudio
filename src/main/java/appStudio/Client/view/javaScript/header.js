@@ -1,6 +1,6 @@
 document.write("<div>"+
                " <nav>"+
-                    "<a href=\"#\" id='menucliente' onclick='submenuCliente()'><button>Cliente</button></a>"+
+                    "<a href=\"#\" id='menucliente' onclick='submenuCliente()'><button>Clientes</button></a>"+
                 "</nav>"+
             "</div>"+
     "<div id='subcliente' hidden= 'hidden'>"+
