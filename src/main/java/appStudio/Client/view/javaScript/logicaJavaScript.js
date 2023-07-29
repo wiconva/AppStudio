@@ -95,3 +95,13 @@ function logear(){
         console.long("Credenciales correctas!!!");
     }
 }
+
+function submenuCliente (){
+       var submenu = document.getElementById("subcliente");
+
+       if(submenu.hidden == true){
+           submenu.hidden = false;
+       }else{
+           submenu.hidden = true;
+       }
+}
