@@ -87,7 +87,7 @@ function updateClient(){
        responseDisplay.append(data);
     });
 }
-//TODO: funcionalidad para el logueo.
+//TODO: funcionalidad para el log.
 function logear(){
     const user = document.getElementById("user");
     const password  = document.getElementById("password");
