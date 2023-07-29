@@ -96,9 +96,9 @@ function logear(){
     }
 }
 
+//Oculata submenú cliente.
 function submenuCliente (){
        var submenu = document.getElementById("subcliente");
-
        if(submenu.hidden == true){
            submenu.hidden = false;
        }else{
