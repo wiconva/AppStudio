@@ -101,10 +101,12 @@ function submenuCliente (){
        var submenu = document.getElementById("subcliente");
        if(submenu.hidden == true){
            submenu.hidden = false;
-           document.querySelector("#menucliente button").style.backgroundColor="blue";
+           document.querySelector("#menucliente button").style.backgroundColor="#0000";
+           document.querySelector("#menucliente button").style.color="red";
        }else{
            submenu.hidden = true;
            document.querySelector("#menucliente button").style.backgroundColor="aliceblue";
+           document.querySelector("#menucliente button").style.color="black";
        }
 
        var submenuItems = document.querySelectorAll("#subcliente button");
