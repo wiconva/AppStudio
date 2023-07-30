@@ -101,7 +101,16 @@ function submenuCliente (){
        var submenu = document.getElementById("subcliente");
        if(submenu.hidden == true){
            submenu.hidden = false;
+           document.querySelector("#menucliente button").style.backgroundColor="blue";
        }else{
            submenu.hidden = true;
+           document.querySelector("#menucliente button").style.backgroundColor="aliceblue";
        }
+
+       var submenuItems = document.querySelectorAll("#subcliente button");
+       for (var i = 0; i< submenuItems.length; i++){
+           submenuItems[i].addEventListener("mouseover",function (){this.style.backgroundColor = "#0000"});
+           submenuItems[i].addEventListener("mouseleave",function (){this.style.backgroundColor="black"});
+       }
+
 }
