@@ -41,3 +41,10 @@ td, th {
     margin-top: 3px;
     padding: 4px;
 }
+
+#headerTitle {
+    position: absolute;
+    top: 20px;
+    left: 45%;
+    font-size: 30px;
+}
