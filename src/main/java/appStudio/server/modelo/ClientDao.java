@@ -8,11 +8,13 @@ public class ClientDao {
     //==========CRUD============
     //CREATE.
     public static int create (ClienteDTO clienteDTO){
+
+        ClienteDTO lastClient = getLastClient();
         String sql = "INSERT INTO CLIENT (ID_CLIENT, NAME, SURNAME, AGE) VALUES (?,?,?,?)";
         Connection connection = new DBConnection().connect();
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setInt(1, clienteDTO.getId());
+            ps.setInt(1, lastClient.getId()+1);
             ps.setString(2, clienteDTO.getName());
             ps.setString(3, clienteDTO.getSurname());
             ps.setInt(4, clienteDTO.getAge());
@@ -109,5 +111,27 @@ public class ClientDao {
             e.printStackTrace();
         }
         return clients;
+    }
+  // get the last client in Client table.
+    public static ClienteDTO getLastClient (){
+        ClienteDTO lastClient = new ClienteDTO();
+        String sqlQuery = "SELECT TOP 1  * FROM CLIENT ORDER BY ID_CLIENT DESC";
+        Connection connection = new DBConnection().connect();
+
+        try {
+            PreparedStatement ps = connection.prepareStatement(sqlQuery);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()){
+                lastClient.setId(rs.getInt(1));
+                lastClient.setName(rs.getString(2));
+                lastClient.setSurname(rs.getString(3));
+                lastClient.setAge(rs.getInt(4));
+            }
+            connection.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return lastClient;
     }
 }

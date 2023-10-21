@@ -135,7 +135,7 @@ public class Main {
         if(ClientDao.create(c) == 1) {
             msgResponse= "Error al crear el cliente.";
         }else {
-            msgResponse = "Se creo el usuario con exito.";
+            msgResponse = "Se creo el usuario con ID: "+ClientDao.getLastClient().getId()+" Exitosamente!!";
         }
         return msgResponse;
     }
