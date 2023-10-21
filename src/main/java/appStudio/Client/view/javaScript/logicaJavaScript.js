@@ -6,7 +6,7 @@ function getAllClients() {
     var contentTable = document.getElementById("allClientsTable");
     fetch(API_URL).then(response => response.text()).then( data =>{
     var clients = data.split(';');
-    for (var i=0; i< clients.length; i++){
+    for (var i=0; i< clients.length-1; i++){
         var rowTable = document.createElement("tr");
         var dataRowTable = clients[i].split(",");
         for(var j=0; j< dataRowTable.length ; j++){
@@ -17,7 +17,6 @@ function getAllClients() {
         allClientsTable.append(rowTable);
     }
     });
-
 }
 
 //Consulta un cliente dado un ID.
