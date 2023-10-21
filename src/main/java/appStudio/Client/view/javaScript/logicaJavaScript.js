@@ -47,7 +47,7 @@ function createClient(){
     responseDisplay.innerText = "";
 
     const API_URL = API_URL_ROOT+"/createClient?"+
-                     "ID="+id.value+
+                     "ID="+id+
                      "&Nombre="+nombre.value+
                      "&Apellido="+apellido.value+
                      "&edad="+edad.value;
