@@ -48,3 +48,10 @@ td, th {
     left: 45%;
     font-size: 30px;
 }
+
+
+#response {
+    background: yellowgreen;
+    width: 200px;
+    margin-left: 2px;
+}

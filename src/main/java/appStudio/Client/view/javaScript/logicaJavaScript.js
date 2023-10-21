@@ -39,10 +39,12 @@ function getClient(){
 
 //Crea un cliente dado id, nombre, apellido, edad.
 function createClient(){
-    var id = document.getElementById("ID");
+    var id =  1;
     var nombre = document.getElementById("Nombre");
     var apellido = document.getElementById("Apellido");
     var edad = document.getElementById("Edad");
+    var responseDisplay = document.getElementById("response");
+    responseDisplay.innerText = "";
 
     const API_URL = API_URL_ROOT+"/createClient?"+
                      "ID="+id.value+
@@ -51,7 +53,6 @@ function createClient(){
                      "&edad="+edad.value;
 
     fetch(API_URL).then(response => response.text()).then(data=>{
-       var responseDisplay = document.getElementById("response");
        responseDisplay.append(data);
     });
 }
@@ -59,11 +60,12 @@ function createClient(){
 //Elimina un cliente dado el ID.
 function deleteClient(){
     var id = document.getElementById("ID");
-    const API_URL = API_URL_ROOT+"/deleteClient?"+
-                     "ID="+id.value;
+    const API_URL = API_URL_ROOT+"/deleteClient?"+ "ID="+id.value;
+
+    var responseDisplay = document.getElementById("response");
+    responseDisplay.innerText = "";
 
     fetch(API_URL).then(response => response.text()).then(data=>{
-       var responseDisplay = document.getElementById("response");
        responseDisplay.append(data);
     });
 }
@@ -74,6 +76,8 @@ function updateClient(){
     var nombre = document.getElementById("Nombre");
     var apellido = document.getElementById("Apellido");
     var edad = document.getElementById("Edad");
+    var responseDisplay = document.getElementById("response");
+    responseDisplay.innerText = "";
 
     const API_URL = API_URL_ROOT+"/updateClient?"+
                      "ID="+id.value+
@@ -82,7 +86,6 @@ function updateClient(){
                      "&edad="+edad.value;
 
     fetch(API_URL).then(response => response.text()).then(data=>{
-       var responseDisplay = document.getElementById("response");
        responseDisplay.append(data);
     });
 }
